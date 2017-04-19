@@ -1,0 +1,80 @@
+{{!-- add input for each form item --}}
+<div class="sign-up-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="form-wrap">
+                    <h1>Sign Up:</h1>
+                    {{#if applicant}}
+                    <form class="serverform" method="post" id="sign-up-form">
+                        <div class="form-group">
+                            <label for="resume" class="sr-only">Resume</label>
+                                <input >
+                        </div>
+                        <div class="form-group">
+                            <label for="experience" class="sr-only">Resume</label>
+                                <input >
+                        </div>
+                        <div class="form-group">
+                            <label for="location" class="sr-only">Resume</label>
+                                <input >
+                        </div>
+                        <div class="form-group">
+                            <label for="field" class="sr-only">Resume</label>
+                                <input >
+                        </div>
+                        {{#if error}}
+                        <div class="form-group">
+                            <div class="alert alert-danger">
+                                {{error}}
+                            </div>
+                        </div>
+                        {{/if}}
+                        <div class="form-goup">
+                            <button type="submit" id="btn-login" class="btn btn-custom">Sign Up</button>
+                        </div>
+                    </form>
+                    {{/if}}
+                    {{#if employer}}
+                    <form class="serverform" method="post" id="sign-up-form">
+                        <div class="form-group">
+                            <label for="company" class="sr-only">Company Name</label>
+                                <input >
+                        </div>
+                        <div class="form-group">
+                            <label for="location" class="sr-only">location</label>
+                                <input >
+                        </div>
+                        <div class="form-group">
+                            <label for="start-date" class="sr-only">Start Date:</label>
+                                <input >
+                        </div>
+                        <div class="form-group">
+                            <label for="job-type" class="sr-only">Job Type</label>
+                                <input >
+                        </div>
+                        <div class="form-group">
+                            <label for="experience" class="sr-only">Experience Needed</label>
+                                <input >
+                        </div>
+                        <div class="form-group">
+                            <label for="apply" class="sr-only">Link to Apply:</label>
+                                <input >
+                        </div>
+                        {{#if error}}
+                        <div class="form-group">
+                            <div class="alert alert-danger">
+                                {{error}}
+                            </div>
+                        </div>
+                        {{/if}}
+                        <div class="form-goup">
+                            <button type="submit" id="btn-login" class="btn btn-custom">Sign Up</button>
+                        </div>
+                    </form>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
