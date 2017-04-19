@@ -41,7 +41,8 @@ let exportedMethods = {
                 location: location,
                 skills: skills,
                 experience: experience,
-                field: field
+                field: field,
+                likedPosts: []
             };
 
             return userCollection
@@ -68,30 +69,22 @@ let exportedMethods = {
                 });
         });
     }
- /* ,
-    updateUser(id, name, breeds) {
-        if (!id) 
-            return Promise.reject("You must provide an id to search for");
+  ,
+    addLikedPost(userId, postId) {
+        if (!userId) 
+            return Promise.reject("You must provide an user id to search for");
+        if (!postId)
+            return Promise.reject("You must provide an post id to add");
         
-        if (!breeds || !Array.isArray(breeds)) 
-            return Promise.reject("You must provide an array of breeds");
+      return users.getUserById(userId).then((userWithLikedPost) =>{
+        userWithLikedPost.likedPosts.push(postId);
+        var u = {$set:userWithLikedPost};
+        return userCollection.updateOne({ _id: userId }, u).then((result) => {
+              return postId;
+              });
         
-        if (breeds.length === 0) 
-            return Promise.reject("You must provide at least one breed.");
-        
-        return dogs().then((dogCollection) => {
-            let updatedDog = {
-                name: name,
-                breeds: breeds
-            };
-
-            return dogCollection.updateOne({
-                _id: id
-            }, updatedDog).then(() => {
-                return this.getDogById(id);
-            });
-        });
-    }*/
+      });
+    }
 }
 
 module.exports = exportedMethods;
