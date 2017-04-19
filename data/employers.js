@@ -34,7 +34,8 @@ let exportedMethods = {
                 email: email,
                 username: username,
                 password: password,
-                company: company
+                company: company,
+                likedUsers: []
             };
 
             return employerCollection
@@ -60,31 +61,22 @@ let exportedMethods = {
                     }
                 });
         });
+    },
+    addLikedUser(employerId, userId) {
+        if (!employerId) 
+            return Promise.reject("You must provide an employer id to search for");
+        if (!userId)
+            return Promise.reject("You must provide an user id to add");
+        
+      return employers.getEmployerById(employerId).then((employerWithLikedUser) =>{
+        employerWithLikedUser.likedUsers.push(userId);
+        var e = {$set:employerWithLikedUser};
+        return employerCollection.updateOne({ _id: employerId }, e).then((result) => {
+              return userId;
+              });
+        
+      });
     }
-/*  ,
-    updateEmployer(id, name, breeds) {
-        if (!id) 
-            return Promise.reject("You must provide an id to search for");
-        
-        if (!breeds || !Array.isArray(breeds)) 
-            return Promise.reject("You must provide an array of breeds");
-        
-        if (breeds.length === 0) 
-            return Promise.reject("You must provide at least one breed.");
-        
-        return dogs().then((dogCollection) => {
-            let updatedDog = {
-                name: name,
-                breeds: breeds
-            };
-
-            return dogCollection.updateOne({
-                _id: id
-            }, updatedDog).then(() => {
-                return this.getDogById(id);
-            });
-        });
-    }*/
 }
 
 module.exports = exportedMethods;
