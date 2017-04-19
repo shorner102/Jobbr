@@ -1,0 +1,67 @@
+<section id="sign-up-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="form-wrap">
+                    <h1>Sign Up:</h1>
+                    <form class="serverform" method="post" id="sign-up-form">
+                        <div class="form-group">
+                            <label for="name" class="sr-only">Name</label>
+                            <input type="text" name="name" id="name" class="form-control" placeholder="Enter name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="sr-only">Email</label>
+                            <input type="email" name="email" id="email" class="form-control" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label for="username" class="sr-only">Username</label>
+                            <input type="text" name="username" id="username" class="form-control" placeholder="Enter username">
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="sr-only">Password</label>
+                            <input type="password" name="password" id="password" class="form-control" placeholder="Enter password">
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="sr-only">Verify Password</label>
+                            <input type="password" name="password" id="password" class="form-control" placeholder="Re-enter password">
+                        </div>
+                        <div class="form-group">
+                            <label for="skills" class="sr-only">Skills</label>
+                            <input type="text" name="skills" id="skills" class="form-control" placeholder="Enter a list of skills.">
+                        </div>
+                        <div class="form-group">
+                            <label for="experience" class="sr-only">Experience</label>
+                            <select name="expeience">
+                                <option value="ged">GED</option>
+                                <option value="high-school">High School</option>
+                                <option value="some-college">Some College</option>
+                                <option value="associates">Associate's Degree</option>
+                                <option value="bachelors">Bachelor's Degree</option>
+                                <option value="masters">Master's Degree</option>
+                                <option value="phd">PhD</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="location" class="sr-only">Desired Location</label>
+                            <input type="text" name="location" id="location" class="form-control" placeholder="Enter desired location">
+                        </div>
+                        <div class="form-group">
+                            <label for="field" class="sr-only">Field of Work</label>
+                            <input type="text" name="field" id="field" class="form-control" placeholder="Enter field of work">
+                        </div>
+                        {{#if error}}
+                        <div class="form-group">
+                            <div class="alert alert-danger">
+                                {{error}}
+                            </div>
+                        </div>
+                        {{/if}}
+                        <div class="form-goup">
+                            <button type="submit" id="btn-login" class="btn btn-custom">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

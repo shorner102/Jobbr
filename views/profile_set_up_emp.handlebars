@@ -1,0 +1,67 @@
+<div class="sign-up-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="form-wrap">
+                    <h1>Sign Up:</h1>
+                    <form class="serverform" method="post" id="sign-up-form">
+                        <div class="form-group">
+                            <label for="name" class="sr-only">Name</label>
+                            <input type="text" name="name" id="name" class="form-control" placeholder="Enter name.">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="sr-only">Email</label>
+                            <input type="email" name="email" id="email" class="form-control" placeholder="Enter email.">
+                        </div>
+                        <div class="form-group">
+                            <label for="username" class="sr-only">Username</label>
+                            <input type="text" name="username" id="username" class="form-control" placeholder="Enter username.">
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="sr-only">Password</label>
+                            <input type="password" name="password" id="password" class="form-control" placeholder="Enter password.">
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="sr-only">Verify Password</label>
+                            <input type="password" name="password" id="password" class="form-control" placeholder="Re-enter password.">
+                        </div>
+                        <div class="form-group">
+                            <label for="company" class="sr-only">Company Name</label>
+                            <input type="text" name="company-name" id="company-name" class="form-control" placeholder="Enter company name.">
+                        </div>
+                        <div class="form-group">
+                            <label for="location" class="sr-only">Location</label>
+                            <input type="text" name="company-location" id="company-location" class="form-control" placeholder="Enter company location.">
+                        </div>
+                        <div class="form-group">
+                            <label for="start-date" class="sr-only">Start Date</label>
+                            <input type="date" name="start-date" id="start-date" class="form-control" placeholder="Enter start date.">
+                        </div>
+                        <div class="form-group">
+                            <label for="job-title" class="sr-only">Job Title</label>
+                            <input type="text" name="job-title" id="job-title" class="form-control" placeholder="Enter job title.">
+                        </div>
+                        <div class="form-group">
+                            <label for="experience" class="sr-only">Experience Needed</label>
+                            <input type="text" name="experience" id="experience" class="form-control" placeholder="Enter experience needed.">
+                        </div>
+                        <div class="form-group">
+                            <label for="apply" class="sr-only">Link to Apply</label>
+                            <input type="url" name="apply" id="apply" class="form-control" placeholder="Enter link to application page.">
+                        </div>
+                        {{#if error}}
+                        <div class="form-group">
+                            <div class="alert alert-danger">
+                                {{error}}
+                            </div>
+                        </div>
+                        {{/if}}
+                        <div class="form-goup">
+                            <button type="submit" id="btn-login" class="btn btn-custom">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

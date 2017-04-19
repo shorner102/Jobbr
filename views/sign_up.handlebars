@@ -1,0 +1,28 @@
+<section id="sign-up-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="form-wrap">
+                    <h1>Sign Up:</h1>
+                    <form class="serverform" method="post" id="sign-up-form">
+                        <div class="form-group">
+                            <label for="profile" class="sr-only">Profile Type</label>
+                            <input type="radio" name="profile" value="applicant"> Applicant<br>
+                            <input type="radio" name="profile" value="employer"> Employer<br>
+                        </div>
+                        {{#if error}}
+                        <div class="form-group">
+                            <div class="alert alert-danger">
+                                {{error}}
+                            </div>
+                        </div>
+                        {{/if}}
+                        <div class="form-goup">
+                            <button type="submit" id="btn-login" class="btn btn-custom">Next</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
