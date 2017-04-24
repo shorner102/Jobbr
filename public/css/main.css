@@ -8,8 +8,11 @@ body {
     background-color: paleturquoise;
     font-family: 'vcr';
     font-size: 22pt;
+    color: #ffd1dc;
 }
 
 footer {
     font-size: .75rem;
+    color: #ffd1dc;
+
 }
