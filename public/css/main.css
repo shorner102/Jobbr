@@ -1,4 +1,16 @@
-*{
-    background-color: white;
-    
+@font-face {
+    font-family: 'vcr';
+    src: url("/vrcfont.ttf");
 }
+
+
+body {
+    background-color: paleturquoise;
+    font-family: 'vcr';
+    font-size: 22pt;
+}
+
+footer {
+    font-size: .75rem;
+}
+
